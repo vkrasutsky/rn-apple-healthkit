@@ -145,6 +145,15 @@
     NSString *unitString = [options objectForKey:key];
     HKUnit *theUnit;
 
+    if([unitString isEqualToString:@"liter"]){
+        theUnit = [HKUnit literUnit];
+    }
+    if([unitString isEqualToString:@"fluidOunceUS"]){
+        theUnit = [HKUnit fluidOunceUSUnit];
+    }
+    if([unitString isEqualToString:@"fluidOunceImperial"]){
+        theUnit = [HKUnit fluidOunceImperialUnit];
+    }
     if([unitString isEqualToString:@"gram"]){
         theUnit = [HKUnit gramUnit];
     }
